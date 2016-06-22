@@ -29,7 +29,8 @@
     "lint": "eslint --fix --ignore-path .gitignore .",
     "prepublish": "npm test",
     "transpile-dev": "builder run clean-lib && builder run extract-metadata && babel --source-root ./src/ -d lib/ src/",
-    "transpile-dev-watch": "builder run clean-lib && builder run extract-metadata && babel --watch --source-root ./src/ -d lib/ src/"
+    "transpile-dev-watch": "builder run clean-lib && builder run extract-metadata && babel --watch --source-root ./src/ -d lib/ src/",
+    "version": "builder-support gen-dev && npm run builder:test"
   },
   "repository": {
     "type": "git",
