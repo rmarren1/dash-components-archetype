@@ -1,7 +1,7 @@
 {
   "name": "dash-components-archetype-dev",
-  "version": "0.0.1",
-  "description": "A [Builder](https://github.com/FormidableLabs/builder) Archetype for Dash components suites",
+  "version": "0.0.2",
+  "description": "A [Builder](https://github.com/FormidableLabs/builder) Archetype for Dash components suites (Development)",
   "main": "index.js",
   "dependencies": {
     "babel-plugin-transform-es2015-modules-commonjs-simple": "^6.7.4",
@@ -13,9 +13,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/plotly/dash-components-archetype.git"
@@ -29,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/plotly/dash-components-archetype/issues"
   },
-  "homepage": "https://github.com/plotly/dash-components-archetype#readme"
+  "homepage": "https://github.com/plotly/dash-components-archetype#readme",
+  "peerDependencies": {}
 }
