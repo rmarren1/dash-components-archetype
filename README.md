@@ -1,5 +1,11 @@
 # Dash Components Archetype
 
+## Overview
+
+This is a [Builder][] archetype for [Dash][] component suites. It defines build-
+and test configuration, as well as development scripts and a convenient way to
+generate a new component suite project with all the necessary boilerplate.
+
 ## Release
 
 To tag and release a new version of the archetype, follow these instructions.
@@ -30,4 +36,6 @@ npm publish && cd dev && npm publish && cd -
 ```
 
 [Builder]: https://github.com/FormidableLabs/builder
+[Dash]: https://github.com/plotly/dash2
+[dash-components-core]: https://github.com/plotly/dash-components-core
 [semver]: http://semver.org/
