@@ -1,0 +1,33 @@
+{
+  "name": "dash-components-archetype-dev",
+  "version": "0.0.1",
+  "description": "A [Builder](https://github.com/FormidableLabs/builder) Archetype for Dash components suites",
+  "main": "index.js",
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs-simple": "^6.7.4",
+    "babel-preset-es2015-webpack": "^6.4.1",
+    "eslint": "^2.8.0",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-react": "^5.1.1",
+    "react": "^15.1.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/plotly/dash-components-archetype.git"
+  },
+  "keywords": [
+    "Dash",
+    "Builder"
+  ],
+  "author": "Per Nilsson <per@sproutlab.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plotly/dash-components-archetype/issues"
+  },
+  "homepage": "https://github.com/plotly/dash-components-archetype#readme"
+}
