@@ -18,10 +18,11 @@
   },
   "devDependencies": {
     "builder-support": "^0.3.0",
-    "eslint": "^2.8.0"
+    "eslint": "^2.8.0",
+    "eslint-plugin-import": "^1.9.2"
   },
   "scripts": {
-    "builder:test": "eslint .",
+    "builder:test": "eslint --fix --ignore-path .gitignore .",
     "build-dev": "webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
     "clean-lib": "mkdir -p lib && rm -rf lib/*",
     "dev": "webpack-dev-server --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
