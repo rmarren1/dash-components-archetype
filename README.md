@@ -11,22 +11,22 @@ package.json scripts with the archetype's package.json scripts.
 
 ```sh
 # 1. Bump package.json `version` according to [semver][]
-$ vi package.json
+vi package.json
 
 # 2. Generate `dev/*` package files
-$ builder-support gen-dev
+builder-support gen-dev
 
 # 3. Run tests
-$ npm run builder:check
+npm run builder:check
 
 # 4. Commit and tag
-$ git add package.json dev
-$ git commit -m "%s"
-$ git tag -a "%s" -m "%s"
-$ git push --follow-tags
+git add package.json dev
+git commit -m "vx.x.x"
+git tag -a "vx.x.x" -m "vx.x.x"
+git push --follow-tags
 
 5. Publish main and dev package
-$ npm publish && cd dev && npm publish && cd -
+npm publish && cd dev && npm publish && cd -
 ```
 
 [Builder]: https://github.com/FormidableLabs/builder
