@@ -2,22 +2,32 @@
 
 ## Release
 
-To tag and release a new version:
+To tag and release a new version of the archetype, follow these instructions.
+You might be tempted to add some of these steps to NPM's `*version` lifecycle
+methods, but that would interfere with versioning and publishing of the actual
+project depending on the archetype, since [Builder][] merges the project
+package.json scripts with the archetype's package.json scripts.
 
-1. Update appropriate `HISTORY.md` notes
-2. Bump `package.json` version
-3. Generate a new `ARCHETYPE-dev` `package.json`
-4. Add to git, tag, and publish
 
 ```sh
-$ vim HISTORY.md              # Version notes
-$ vim package.json            # Bump version
-$ builder-support gen-dev     # Generate `dev/*` files
-$ npm run builder:check       # Last check!
-$ git add package.json dev HISTORY.md
-$ git commit -m "Version bump"
-$ git tag -a "vNUMBER" -m "Version NUMBER"
-$ git push && git push --tags
-$ npm publish                 # Publish main project
-$ cd dev && npm publish       # Publish dev project
+# 1. Bump package.json `version` according to [semver][]
+$ vi package.json
+
+# 2. Generate `dev/*` package files
+$ builder-support gen-dev
+
+# 3. Run tests
+$ npm run builder:check
+
+# 4. Commit and tag
+$ git add package.json dev
+$ git commit -m "%s"
+$ git tag -a "%s" -m "%s"
+$ git push --follow-tags
+
+5. Publish main and dev package
+$ npm publish && cd dev && npm publish && cd -
 ```
+
+[Builder]: https://github.com/FormidableLabs/builder
+[semver]: http://semver.org/
