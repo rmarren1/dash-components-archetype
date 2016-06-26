@@ -1,0 +1,27 @@
+{
+  "name": "<%= packageName %>",
+  "version": "0.0.1",
+  "description": "<%= packageDescription || packageName %>",
+  "main": "lib/index.js",<% if (packageGitHubOrg) { %>
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= packageGitHubOrg %>/<%= packageName %>.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<%= packageGitHubOrg %>/<%= packageName %>/issues"
+  },
+  "homepage": "https://github.com/<%= packageGitHubOrg %>/<%= packageName %>",<% } %>
+  "scripts": {
+    "start": "DASH_COMPONENTS_SOURCE=src/components builder run transpile-dev-watch",
+    "test": "builder run check"
+  },
+  "dependencies": {
+    "builder": "2.10.1",
+    "dash-components-archetype": "^0.0.3",
+    "react": "^15.1.0"
+  },
+  "devDependencies": {
+    "dash-components-archetype-dev": "^0.0.3"
+  }
+}
