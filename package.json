@@ -26,7 +26,6 @@
     "build-dev": "webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
     "check": "builder run lint",
     "clean-lib": "mkdir -p lib && rm -rf lib/*",
-    "dev": "webpack-dev-server --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
     "extract-metadata": "mkdir -p lib && react-docgen --pretty -o lib/metadata.json ${DASH_COMPONENTS_SOURCE}",
     "lint": "eslint --fix --ignore-path .gitignore .",
     "prepublish": "npm test",

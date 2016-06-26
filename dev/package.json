@@ -9,8 +9,7 @@
     "eslint": "^2.8.0",
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-react": "^5.1.1",
-    "react": "^15.1.0",
-    "webpack-dev-server": "^1.14.1"
+    "react": "^15.1.0"
   },
   "devDependencies": {},
   "scripts": {},
