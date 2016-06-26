@@ -22,7 +22,7 @@
     "eslint-plugin-import": "^1.9.2"
   },
   "scripts": {
-    "builder:check": "eslint --fix --ignore-path .gitignore .",
+    "builder:check": "eslint --fix --ignore-path .gitignore --ext *.js config init",
     "build-dev": "webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
     "check": "builder run lint",
     "clean-lib": "mkdir -p lib && rm -rf lib/*",
