@@ -1,6 +1,6 @@
 {
   "name": "dash-components-archetype-dev",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A [Builder](https://github.com/FormidableLabs/builder) Archetype for Dash components suites (Development)",
   "main": "index.js",
   "dependencies": {
