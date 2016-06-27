@@ -46,20 +46,9 @@ changes to the component suite.
 
 ## Customizing your project
 
-### Components path
-
-The default path to your components is `src/components`. If you want to change
-this, you'll also have to update the `DASH_COMPONENTS_SOURCE` environment
-variable in your project's `package.json`:
-
-```json
-{
-  "scripts": {
-    "start": "DASH_COMPONENTS_SOURCE=src/components builder run transpile-dev-watch",
-    "test": "builder run check"
-  }
-}
-```
+You can override any `npm` script in the archetype with your own implementation.
+To see the list of supported scripts, run `./node_modules/bin/builder run`. For
+more details, see [Builder Archetypes][].
 
 ## Release
 
@@ -91,6 +80,7 @@ npm publish && cd dev && npm publish && cd -
 ```
 
 [Builder]: https://github.com/FormidableLabs/builder
+[Builder Archetypes]: https://github.com/FormidableLabs/builder#archetypes
 [Dash]: https://github.com/plotly/dash2
 [dash-components-core]: https://github.com/plotly/dash-components-core
 [semver]: http://semver.org/

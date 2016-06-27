@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/<%= packageGitHubOrg %>/<%= packageName %>",<% } %>
   "scripts": {
-    "start": "DASH_COMPONENTS_SOURCE=src/components builder run transpile-dev-watch",
+    "start": "builder run transpile-dev-watch",
     "test": "builder run check"
   },
   "dependencies": {
