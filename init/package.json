@@ -18,10 +18,10 @@
   },
   "dependencies": {
     "builder": "2.10.1",
-    "dash-components-archetype": "^0.0.3",
+    "dash-components-archetype": "^0.1.2",
     "react": "^15.1.0"
   },
   "devDependencies": {
-    "dash-components-archetype-dev": "^0.0.3"
+    "dash-components-archetype-dev": "^0.1.2"
   }
 }
