@@ -64,7 +64,7 @@ package.json scripts with the archetype's package.json scripts.
 vi package.json
 
 # 2. Generate `dev/*` package files
-builder-support gen-dev
+node_modules/.bin/builder-support gen-dev
 
 # 3. Run tests
 npm run builder:check
