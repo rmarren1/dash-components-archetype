@@ -38,6 +38,19 @@ Now you should be able to restart the webpack process (in `dash2/renderer`:
 `ctrl-c`, `npm start`), after which webpack will automatically pick up new
 changes to the component suite.
 
+## Publishing
+
+```sh
+# Bump the package version
+$ npm version major|minor|patch
+
+# Push branch and tags to repo
+$ git push --follow-tags
+
+# Publish to NPM (will run tests as a pre-publish step)
+$ npm publish
+```
+
 ## Builder / Archetype
 
 We use [Builder][] to centrally manage build configuration, dependencies, and

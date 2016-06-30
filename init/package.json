@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/<%= packageGitHubOrg %>/<%= packageName %>",<% } %>
   "scripts": {
+    "prepublish": "npm test",
     "start": "builder run transpile-dev-watch",
     "test": "builder run check"
   },
