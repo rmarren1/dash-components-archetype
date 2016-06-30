@@ -1,0 +1,4 @@
+flask
+flask-cors
+plotly
+dash.ly==0.11.6

@@ -45,6 +45,13 @@ module.exports = {
   derived: {
     licenseDate: function (data, cb) {
       cb(null, (new Date()).getFullYear().toString());
+    },
+    packageNameUnderscored: function (data, cb) {
+      var convertedPackageName = data.packageName
+        .replace(/-/g, '_')
+        .toLowerCase();
+
+      cb(null, convertedPackageName);
     }
   }
 };
