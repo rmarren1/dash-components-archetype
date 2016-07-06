@@ -14,6 +14,7 @@
   "homepage": "https://github.com/<%= packageGitHubOrg %>/<%= packageName %>",<% } %>
   "scripts": {
     "prepublish": "npm test",
+    "publish-pypi": "python setup.py sdist upload",
     "start": "builder run transpile-dev-watch",
     "test": "builder run check"
   },
