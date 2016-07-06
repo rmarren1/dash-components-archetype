@@ -38,7 +38,25 @@ Now you should be able to restart the webpack process (in `dash2/renderer`:
 `ctrl-c`, `npm start`), after which webpack will automatically pick up new
 changes to the component suite.
 
+## Installing python module locally
+
+You don't need publishing access to test the module locally.
+
+```sh
+# Install in `site-packages` on your machine
+$ python setup.py install
+```
+
 ## Publishing
+
+For now, two different workflows are necessary for publishing to NPM and PyPi,
+respectively. TODO:
+[#5](https://github.com/plotly/dash-components-archetype/issues/5) will roll up
+publishing steps into one workflow.
+
+Ask @chriddyp to get NPM / PyPi package publishing accesss.
+
+### Publishing to NPM
 
 ```sh
 # Bump the package version
@@ -49,6 +67,20 @@ $ git push --follow-tags
 
 # Publish to NPM (will run tests as a pre-publish step)
 $ npm publish
+```
+
+### Publishing to PyPi
+
+```sh
+# Bump the package version
+$ vi setup.py
+
+# Commit to github
+$ git add setup.py
+$ git commit -m "Bump pypi package version to vx.x.x"
+
+# Publish to PyPi
+$ npm run publish-pypi
 ```
 
 ## Builder / Archetype
