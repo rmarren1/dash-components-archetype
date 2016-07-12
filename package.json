@@ -26,7 +26,7 @@
     "build-dev": "webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
     "check": "builder run lint",
     "clean-lib": "mkdir -p lib && rm -rf lib/*",
-    "demo": "webpack-dev-server --hot --config=node_modules/dash-components-archetype/config/webpack/webpack.config.demo.js",
+    "demo": "webpack-dev-server --hot --content-base demo --config=node_modules/dash-components-archetype/config/webpack/webpack.config.demo.js",
     "extract-metadata": "mkdir -p lib && react-docgen --pretty -o lib/metadata.json src/components",
     "lint": "eslint --fix --ignore-path .gitignore .",
     "transpile-dev": "builder run clean-lib && builder run extract-metadata && babel --source-root ./src/ -d lib/ src/",
