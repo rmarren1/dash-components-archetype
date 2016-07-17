@@ -46,6 +46,15 @@ module.exports = {
     licenseDate: function (data, cb) {
       cb(null, (new Date()).getFullYear().toString());
     },
+    todayDate: function (data, cb) {
+      var d = new Date();
+      var monthNum = d.getUTCMonth() + 1;
+      var monthStr = (monthNum < 10 ? '0' + monthNum : monthNum.toString())
+      var dayNum = d.getUTCDate();
+      var dayStr = (dayNum < 10 ? '0' + dayNum : dayNum.toString())
+
+      cb(null, [d.getFullYear(), monthStr, dayStr].join('-'));
+    },
     packageNameUnderscored: function (data, cb) {
       var convertedPackageName = data.packageName
         .replace(/-/g, '_')
