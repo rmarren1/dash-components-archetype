@@ -22,11 +22,26 @@ $ npm install
 
 ## Development
 
-We don't yet have a dev server with demo capabilities in this archetype. The
-best way to test your components is by linking into `dash2` and testing them
-from there.
+### Demo Server
 
-1. Prepare module by linking and watching for changes
+If your component suite project has a `demo/` directory following the same
+structure as the [`init/demo`](./init/demo) directory in this archetype, you can
+start up a demo development server:
+
+```sh
+$ builder run demo
+$ open http://localhost:9000
+```
+
+This lets you see a demo of the rendered components. You have to maintain the
+list of components in `demo/Demo.react.js`.
+
+### Testing your components in Dash
+
+The best way to test your components in the real Dash context is by linking into
+`dash2` and testing them from there.
+
+1. Prepare your component suite module by linking and watching for changes
 
         # Symlink module
         $ npm link
