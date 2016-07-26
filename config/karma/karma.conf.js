@@ -11,7 +11,7 @@ var webpackCfg = require('../webpack/webpack.config.test');
 
 var MAIN_PATH = path.join(process.cwd(), 'test/client/main.js');
 var PREPROCESSORS = {};
-PREPROCESSORS[MAIN_PATH] = ['webpack'];
+PREPROCESSORS[MAIN_PATH] = ['webpack', 'sourcemap'];
 
 module.exports = function (config) {
   /* eslint-disable global-require */

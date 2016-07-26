@@ -23,6 +23,7 @@ var archetypeDevNodeModules = path.join(
 module.exports = {
   cache: true,
   context: path.join(ROOT, 'test/client'),
+  devtool: 'inline-source-map',
   entry: './main',
   externals: {
     'cheerio': 'window',
@@ -60,6 +61,5 @@ module.exports = {
         loader: require.resolve('json-loader')
       }
     ]
-  },
-  devtool: 'source-map'
+  }
 };
