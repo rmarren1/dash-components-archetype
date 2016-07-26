@@ -9,7 +9,7 @@
 var path = require('path');
 var webpackCfg = require('../webpack/webpack.config.test');
 
-var MAIN_PATH = path.join(process.cwd(), 'test/client/main.js');
+var MAIN_PATH = path.join(process.cwd(), 'test/main.js');
 var PREPROCESSORS = {};
 PREPROCESSORS[MAIN_PATH] = ['webpack', 'sourcemap'];
 

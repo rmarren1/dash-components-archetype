@@ -22,7 +22,7 @@ var archetypeDevNodeModules = path.join(
 /* AND NOW EXPORT THE CONFIGURATION */
 module.exports = {
     cache: true,
-    context: path.join(ROOT, 'test/client'),
+    context: path.join(ROOT, 'test'),
     devtool: 'inline-source-map',
     entry: './main',
     externals: {
