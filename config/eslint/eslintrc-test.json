@@ -1,0 +1,6 @@
+{
+    "extends": "./eslintrc-react.json",
+    "env": {
+        "mocha": true
+    }
+}

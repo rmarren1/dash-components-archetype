@@ -25,11 +25,12 @@
   "scripts": {
     "builder:check": "eslint --fix --ignore-path .gitignore --ext *.js config init",
     "build-dev": "webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
-    "check": "builder run lint",
+    "check": "builder run lint && builder run test-frontend",
     "clean-lib": "mkdir -p lib && rm -rf lib/*",
     "demo": "webpack-dev-server --hot --port=9000 --content-base demo --config=node_modules/dash-components-archetype/config/webpack/webpack.config.demo.js",
     "extract-metadata": "mkdir -p lib && react-docgen --pretty -o lib/metadata.json src/components",
     "lint": "eslint --fix --ignore-path .gitignore .",
+    "test-frontend": "karma start node_modules/dash-components-archetype/config/karma/karma.conf.js",
     "transpile-dev": "builder run clean-lib && builder run extract-metadata && babel --source-root ./src/ -d lib/ src/",
     "transpile-dev-watch": "builder run clean-lib && builder run extract-metadata && babel --watch --source-root ./src/ -d lib/ src/"
   },
