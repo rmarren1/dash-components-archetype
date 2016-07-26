@@ -31,6 +31,7 @@
     "extract-metadata": "mkdir -p lib && react-docgen --pretty -o lib/metadata.json src/components",
     "lint": "eslint --fix --ignore-path .gitignore .",
     "test-frontend": "karma start node_modules/dash-components-archetype/config/karma/karma.conf.js",
+    "test-frontend-watch": "karma start --single-run=false node_modules/dash-components-archetype/config/karma/karma.conf.js",
     "transpile-dev": "builder run clean-lib && builder run extract-metadata && babel --source-root ./src/ -d lib/ src/",
     "transpile-dev-watch": "builder run clean-lib && builder run extract-metadata && babel --watch --source-root ./src/ -d lib/ src/"
   },
