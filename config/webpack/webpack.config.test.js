@@ -37,10 +37,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['', '.js', '.json'],
-        alias: {
-            // Allow root import of `src/FOO` from ROOT/src.
-            src: path.join(ROOT, 'src')
-        },
         root: [archetypeDevNodeModules]
     },
     resolveLoader: {
