@@ -15,51 +15,51 @@ var ROOT = process.cwd();
 // just the _directory_ of the module. So use heuristic of finding dir of
 // package.json which **must** exist at a predictable location.
 var archetypeDevNodeModules = path.join(
-  path.dirname(require.resolve('dash-components-archetype-dev/package.json')),
-  'node_modules'
+    path.dirname(require.resolve('dash-components-archetype-dev/package.json')),
+    'node_modules'
 );
 
 /* AND NOW EXPORT THE CONFIGURATION */
 module.exports = {
-  cache: true,
-  context: path.join(ROOT, 'test/client'),
-  devtool: 'inline-source-map',
-  entry: './main',
-  externals: {
-    'cheerio': 'window',
-    'react/addons': true,
-    'react/lib/ExecutionEnvironment': true,
-    'react/lib/ReactContext': true
-  },
-  output: {
-    filename: 'main.js',
-    publicPath: '/assets'
-  },
-  resolve: {
-    extensions: ['', '.js', '.json'],
-    alias: {
-      // Allow root import of `src/FOO` from ROOT/src.
-      src: path.join(ROOT, 'src')
+    cache: true,
+    context: path.join(ROOT, 'test/client'),
+    devtool: 'inline-source-map',
+    entry: './main',
+    externals: {
+        'cheerio': 'window',
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
     },
-    root: [archetypeDevNodeModules]
-  },
-  resolveLoader: {
-    root: [archetypeDevNodeModules]
-  },
+    output: {
+        filename: 'main.js',
+        publicPath: '/assets'
+    },
+    resolve: {
+        extensions: ['', '.js', '.json'],
+        alias: {
+            // Allow root import of `src/FOO` from ROOT/src.
+            src: path.join(ROOT, 'src')
+        },
+        root: [archetypeDevNodeModules]
+    },
+    resolveLoader: {
+        root: [archetypeDevNodeModules]
+    },
 
-  module: {
-    loaders: [
-      {
-        test: /\.js?$/,
-        exclude: [/node_modules/],
-        // **Note**: Cannot use shorthand `'babel-loader'` or `'babel'` when
-        // we are playing around with `NODE_PATH` in builder. Manually
-        // resolve path.
-        loader: require.resolve('babel-loader')
-      }, {
-        test: /\.json$/,
-        loader: require.resolve('json-loader')
-      }
-    ]
-  }
+    module: {
+        loaders: [
+            {
+                test: /\.js?$/,
+                exclude: [/node_modules/],
+                // **Note**: Cannot use shorthand `'babel-loader'` or `'babel'` when
+                // we are playing around with `NODE_PATH` in builder. Manually
+                // resolve path.
+                loader: require.resolve('babel-loader')
+            }, {
+                test: /\.json$/,
+                loader: require.resolve('json-loader')
+            }
+        ]
+    }
 };

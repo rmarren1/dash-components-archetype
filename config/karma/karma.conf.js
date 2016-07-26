@@ -14,36 +14,36 @@ var PREPROCESSORS = {};
 PREPROCESSORS[MAIN_PATH] = ['webpack', 'sourcemap'];
 
 module.exports = function (config) {
-  /* eslint-disable global-require */
+    /* eslint-disable global-require */
 
-  // Start with the 'dev' (webpack-dev-server is already running) config
-  // and add in the webpack stuff.
-  require('./karma.conf.dev')(config);
+    // Start with the 'dev' (webpack-dev-server is already running) config
+    // and add in the webpack stuff.
+    require('./karma.conf.dev')(config);
 
-  // Overrides.
-  config.set({
-    preprocessors: PREPROCESSORS,
-    files: [
-      // Sinon has issues with webpack. Do global include.
-      require('dash-components-archetype-dev/require').resolve('sinon/pkg/sinon'),
+    // Overrides.
+    config.set({
+        preprocessors: PREPROCESSORS,
+        files: [
+            // Sinon has issues with webpack. Do global include.
+            require('dash-components-archetype-dev/require').resolve('sinon/pkg/sinon'),
 
-      // Test bundle (created via local webpack-dev-server in this config).
-      MAIN_PATH
-    ],
-    webpack: webpackCfg,
-    webpackServer: {
-      port: 3002, // Choose a non-conflicting port (3000 app, 3001 test dev)
-      quiet: false,
-      noInfo: true,
-      stats: {
-        assets: false,
-        colors: true,
-        version: false,
-        hash: false,
-        timings: false,
-        chunks: false,
-        chunkModules: false
-      }
-    }
-  });
+            // Test bundle (created via local webpack-dev-server in this config).
+            MAIN_PATH
+        ],
+        webpack: webpackCfg,
+        webpackServer: {
+            port: 3002, // Choose a non-conflicting port (3000 app, 3001 test dev)
+            quiet: false,
+            noInfo: true,
+            stats: {
+                assets: false,
+                colors: true,
+                version: false,
+                hash: false,
+                timings: false,
+                chunks: false,
+                chunkModules: false
+            }
+        }
+    });
 };

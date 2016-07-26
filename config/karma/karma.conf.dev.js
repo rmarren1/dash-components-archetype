@@ -8,25 +8,25 @@
  * server during the test run.
  */
 module.exports = function (config) {
-  config.set({
-    frameworks: ['mocha', 'phantomjs-shim'],
-    reporters: ['spec'],
-    browsers: ['PhantomJS'],
-    basePath: '.', // repository root.
-    files: [
-      // Sinon has issues with webpack. Do global include.
-      require('dash-components-archetype-dev/require').resolve('sinon/pkg/sinon'), // eslint-disable-line global-require, max-len
+    config.set({
+        frameworks: ['mocha', 'phantomjs-shim'],
+        reporters: ['spec'],
+        browsers: ['PhantomJS'],
+        basePath: '.', // repository root.
+        files: [
+            // Sinon has issues with webpack. Do global include.
+            require('dash-components-archetype-dev/require').resolve('sinon/pkg/sinon'), // eslint-disable-line global-require, max-len
 
-      // Test bundle (must be created via `npm run dev|hot|server-test`)
-      'http://127.0.0.1:3001/assets/main.js'
-    ],
-    port: 9999,
-    autoWatch: true,
-    singleRun: true,
-    client: {
-      mocha: {
-        ui: 'bdd'
-      }
-    }
-  });
+            // Test bundle (must be created via `npm run dev|hot|server-test`)
+            'http://127.0.0.1:3001/assets/main.js'
+        ],
+        port: 9999,
+        autoWatch: true,
+        singleRun: true,
+        client: {
+            mocha: {
+                ui: 'bdd'
+            }
+        }
+    });
 };
