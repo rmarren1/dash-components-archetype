@@ -21,6 +21,7 @@ module.exports = function (config) {
       'http://127.0.0.1:3001/assets/main.js'
     ],
     port: 9999,
+    autoWatch: true,
     singleRun: true,
     client: {
       mocha: {
