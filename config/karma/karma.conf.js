@@ -14,15 +14,15 @@ var PREPROCESSORS = {};
 PREPROCESSORS[MAIN_PATH] = ['webpack', 'sourcemap'];
 
 module.exports = function (config) {
-    /* eslint-disable global-require */
-
-    // Start with the 'dev' (webpack-dev-server is already running) config
-    // and add in the webpack stuff.
-    require('./karma.conf.dev')(config);
-
-    // Overrides.
     config.set({
-        preprocessors: PREPROCESSORS,
+        autoWatch: true,
+        basePath: '.', // repository root.
+        browsers: ['PhantomJS'],
+        client: {
+            mocha: {
+                ui: 'bdd'
+            }
+        },
         files: [
             // Sinon has issues with webpack. Do global include.
             require('dash-components-archetype-dev/require').resolve('sinon/pkg/sinon'),
@@ -30,6 +30,11 @@ module.exports = function (config) {
             // Test bundle (created via local webpack-dev-server in this config).
             MAIN_PATH
         ],
+        frameworks: ['mocha', 'phantomjs-shim'],
+        port: 9999,
+        reporters: ['spec'],
+        singleRun: true,
+        preprocessors: PREPROCESSORS,
         webpack: webpackCfg,
         webpackServer: {
             port: 3002, // Choose a non-conflicting port (3000 app, 3001 test dev)
