@@ -24,6 +24,7 @@
     "react": "^15.1.0"
   },
   "devDependencies": {
-    "dash-components-archetype-dev": "^<%= archetype.devPackage.version || '^0.1.2' %>"
+    "dash-components-archetype-dev": "^<%= archetype.devPackage.version || '^0.1.2' %>",
+    "enzyme": "^2.4.1"
   }
 }

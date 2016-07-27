@@ -18,8 +18,62 @@ $ npm start
 
 ## Development
 
-We don't yet have a dev server with demo capabilities. The best way to test
-your components is by linking into `dash2` and testing them from there.
+### Demo server
+
+You can start up a demo development server to see a demo of the rendered
+components:
+
+```sh
+$ builder run demo
+$ open http://localhost:9000
+```
+
+You have to maintain the list of components in `demo/Demo.react.js`.
+
+### Code quality and tests
+
+#### To run lint and unit tests:
+
+```sh
+$ npm test
+```
+
+#### To run unit tests and watch for changes:
+
+```sh
+$ npm run test-watch
+```
+
+#### To debug unit tests in a browser (Chrome):
+
+```sh
+$ npm run test-debug
+```
+
+1. Wait until Chrome launches.
+2. Click the "DEBUG" button in the top right corner.
+3. Open up Chrome Devtools (`Cmd+opt+i`).
+4. Click the "Sources" tab.
+5. Find source files
+  - Navigate to `webpack:// -> . -> spec/components` to find your test source files.
+  - Navigate to `webpack:// -> [your/repo/path]] -> <%= packageName %> -> src` to find your component source files.
+6. Now you can set breakpoints and reload the page to hit them.
+7. The test output is available in the "Console" tab, or in any tab by pressing "Esc".
+
+#### To run a specific test
+
+In your test, append `.only` to a `describe` or `it` statement:
+
+```javascript
+describe.only('Foo component', () => {
+    // ...
+})l
+```
+
+### Testing your components in Dash
+
+The best way to test your components in the real Dash context is by linking into
+`dash2` and testing them from there.
 
 1. Prepare module by linking and watching for changes
 
@@ -32,13 +86,13 @@ your components is by linking into `dash2` and testing them from there.
 2. Link module into `dash2` project
 
         # In the `dash2/renderer` project directory:
-        $ npm link [YOUR-COMPONENT-SUITE-NAME]
+        $ npm link <%= packageName %>
 
 Now you should be able to restart the webpack process (in `dash2/renderer`:
 `ctrl-c`, `npm start`), after which webpack will automatically pick up new
 changes to the component suite.
 
-## Installing python module locally
+## Installing python package locally
 
 You don't need publishing access to test the module locally.
 
@@ -86,7 +140,15 @@ $ npm run publish-pypi
 ## Builder / Archetype
 
 We use [Builder][] to centrally manage build configuration, dependencies, and
-scripts. See the [dash-components-archetype][] repo for more information.
+scripts.
+
+To see all `builder` scripts available:
+
+```sh
+$ builder help
+```
+
+See the [dash-components-archetype][] repo for more information.
 
 
 [Builder]: https://github.com/FormidableLabs/builder
