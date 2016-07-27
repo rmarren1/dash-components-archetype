@@ -36,6 +36,17 @@ $ open http://localhost:9000
 This lets you see a demo of the rendered components. You have to maintain the
 list of components in `demo/Demo.react.js`.
 
+### Code quality
+
+To run lint:
+
+```sh
+$ npm test
+```
+
+TODO: ESLint is not reporting problems
+https://github.com/plotly/dash-components-archetype/issues/15
+
 ### Testing your components in Dash
 
 The best way to test your components in the real Dash context is by linking into
