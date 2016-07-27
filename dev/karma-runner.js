@@ -7,7 +7,7 @@ var sinonChai = require('sinon-chai');
 
 module.exports = {
     /*
-     * Chai / Sinon / Mocha configuration.
+     * Chai / Sinon / Mocha / Globals configuration.
      */
     setupEnvironment: function () {
         // Exports
@@ -21,6 +21,14 @@ module.exports = {
           ui: 'bdd',
           bail: false
         });
+
+        // Replace console.error implementation to fail tests on e.g.
+        // missing required props
+        if (window.console && window.console.error) {
+          window.console.error = function (err) {
+            throw new Error(err);
+          }
+        }
     },
 
     startKarma: function () {

@@ -5,7 +5,7 @@ import ExampleComponent from '../ExampleComponent.react';
 describe('ExampleComponent', () => {
 
     it('renders', () => {
-        const component = shallow(<ExampleComponent/>);
+        const component = shallow(<ExampleComponent label="Test label"/>);
         expect(component).to.be.ok;
     });
 });
