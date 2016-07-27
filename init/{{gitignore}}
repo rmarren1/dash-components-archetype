@@ -1,7 +1,9 @@
 build/
+coverage/
 dist/
 lib/
 node_modules/
+<%= packageNameUnderscored %>/metadata.json
 .npm
 vv/
 venv/
