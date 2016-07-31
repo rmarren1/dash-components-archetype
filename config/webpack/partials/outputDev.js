@@ -2,12 +2,11 @@
 
 var path = require('path');
 var partial = require('webpack-partial').default;
+var inferNamespace = require('../infer-namespace');
 
 var ROOT = process.cwd();
 var BUILD_PATH = path.join(ROOT, 'lib');
-
-// TEMP Change to dynamic library name
-var LIBRARY_NAME = 'dash_core_components';
+var LIBRARY_NAME = inferNamespace(ROOT);
 
 module.exports = function (config) {
     return partial(config, {
