@@ -26,11 +26,11 @@
   },
   "dependencies": {
     "builder": "2.10.1",
-    "dash-components-archetype": "^<%= archetype.package.version || '^0.1.8' %>",
+    "dash-components-archetype": "^<%= archetype.package.version || '^0.2.0' %>",
     "react": "^15.1.0"
   },
   "devDependencies": {
-    "dash-components-archetype-dev": "^<%= archetype.devPackage.version || '^0.1.8' %>",
+    "dash-components-archetype-dev": "^<%= archetype.devPackage.version || '^0.2.0' %>",
     "enzyme": "^2.4.1",
     "react-dom": "^15.1.0"
   }
