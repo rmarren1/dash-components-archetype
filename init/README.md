@@ -80,10 +80,14 @@ The best way to test your components in the real Dash context is by linking into
         # Once this is started, you can just leave it running.
         $ npm start
 
-2. Install module locally
+2. Install module locally (after every change)
 
-        # Every time you've made a change, you need to do this again.
+        # Generate metadata, and build the JavaScript bundle
         $ npm run install-local
+
+        # Now you're done. For subsequent changes, if you've got `npm start`
+        # running in a separate process, it's enough to just do:
+        $ python setup.py install
 
 3. Run the dash layout you want to test
 
@@ -91,7 +95,7 @@ The best way to test your components in the real Dash context is by linking into
         $ python my_dash_layout.py
 
 
-There is a workflow that links your module into `site-packages` which would
+**TODO:** There is a workflow that links your module into `site-packages` which would
 make it unnecessary to re-run `2.` on every change: `python setup.py develop`.
 Unfortunately, this doesn't seem to work with resources defined in
 `package_data`.
@@ -117,7 +121,7 @@ $ npm run uninstall-local
 ## Publishing
 
 For now, multiple steps are necessary for publishing to NPM and PyPi,
-respectively. TODO:
+respectively. **TODO:**
 [#5](https://github.com/plotly/dash-components-archetype/issues/5) will roll up
 publishing steps into one workflow.
 
