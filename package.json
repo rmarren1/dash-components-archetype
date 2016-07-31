@@ -25,7 +25,7 @@
   "scripts": {
     "builder:check": "eslint --fix --ignore-path .gitignore --ext *.js config init",
     "build-dev": "builder run clean-lib && builder run extract-metadata && webpack -w --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
-    "build-dist": "builder run clean-lib && builder run extract-metadata && webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dist.js",
+    "build-dist": "builder run clean-lib && builder run extract-metadata && NODE_ENV=production webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dist.js",
     "check": "builder run lint && builder run test-frontend-cov",
     "clean-lib": "mkdir -p lib && rm -rf lib/*",
     "demo": "webpack-dev-server --hot --port=9000 --content-base demo --config=node_modules/dash-components-archetype/config/webpack/webpack.config.demo.js",

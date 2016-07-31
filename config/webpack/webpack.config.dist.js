@@ -6,7 +6,7 @@ var babel = require('./partials/babel');
 var defineEnv = require('./partials/defineEnv');
 var entryProd = require('./partials/entryProd')
 var outputProd = require('./partials/outputProd');
-var sourceMapDev = require('./partials/sourceMapDev');
+var optimizeProd = require('./partials/optimizeProd');
 var baseConfig = require('./webpack.config');
 
 module.exports = compose(
@@ -14,5 +14,5 @@ module.exports = compose(
     defineEnv,
     entryProd,
     outputProd,
-    sourceMapDev
+    optimizeProd
 )(baseConfig);
