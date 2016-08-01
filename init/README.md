@@ -72,9 +72,6 @@ describe.only('Foo component', () => {
 
 ### Testing your components in Dash
 
-The best way to test your components in the real Dash context is by linking into
-`dash2` and testing them from there.
-
 1. Build development bundle to `lib/` and watch for changes
 
         # Once this is started, you can just leave it running.

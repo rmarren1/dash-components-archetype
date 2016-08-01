@@ -1,0 +1,5 @@
+include <%= packageNameUnderscored %>/bundle.js
+include <%= packageNameUnderscored %>/bundle.js.map
+include <%= packageNameUnderscored %>/metadata.json
+include README.md
+include LICENSE.md
