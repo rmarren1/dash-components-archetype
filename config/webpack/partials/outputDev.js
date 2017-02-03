@@ -14,6 +14,8 @@ module.exports = function (config) {
             library: LIBRARY_NAME,
             libraryTarget: 'this', // Could be 'umd'
             path: BUILD_PATH,
+            pathinfo: true,
+            publicPath: '/lib/',   // For loading from webpack dev server
             filename: '[name].js'
         }
     });
