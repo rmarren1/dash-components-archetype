@@ -14,4 +14,4 @@ module.exports = {
         extensions: ['', '.js', '.jsx'],
         modulesDirectories: ['node_modules']
     }
-};
+}
