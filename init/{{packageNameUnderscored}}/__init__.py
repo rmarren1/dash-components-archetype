@@ -1,13 +1,18 @@
-import os
+import os as _os
 import dash as _dash
 import sys as _sys
 
-current_path = os.path.dirname(os.path.abspath(__file__))
+_current_path = _os.path.dirname(_os.path.abspath(__file__))
 
-_dash.development.component_loader.load_components(
-    os.path.join(current_path, '..', 'lib', 'metadata.json'),
-    ['content', 'id', 'key', 'className', 'style', 'dependencies'],
+_components = _dash.development.component_loader.load_components(
+    _os.path.join(_current_path, 'metadata.json'),
+
+    [],
+
     '<%= packageNameUnderscored %>',
-    globals(),
-    _sys._getframe(1).f_globals.get('__name__', '__main__')
 )
+
+_this_module = _sys.modules[__name__]
+
+for component in _components:
+    setattr(_this_module, component.__name__, component)
