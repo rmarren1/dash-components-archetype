@@ -13,5 +13,9 @@ module.exports = {
         // Need `''` so referencing modules by `name.js` works.
         extensions: ['', '.js', '.jsx'],
         modulesDirectories: ['node_modules']
+    },
+    externals: {
+		'react': 'React',
+		'react-dom': 'ReactDOM'
     }
 }
