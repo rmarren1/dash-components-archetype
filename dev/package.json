@@ -1,6 +1,6 @@
 {
   "name": "dash-components-archetype-dev",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A [Builder](https://github.com/FormidableLabs/builder) Archetype for Dash components suites (Development)",
   "main": "index.js",
   "dependencies": {
@@ -44,7 +44,7 @@
     "Dash",
     "Builder"
   ],
-  "author": "Per Nilsson <per@sproutlab.com>",
+  "author": "Per Nilsson <per@sproutlab.com>, Chris Parmer <chris@plot.ly>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/plotly/dash-components-archetype/issues"
