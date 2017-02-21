@@ -1,8 +1,10 @@
 from setuptools import setup
 
+exec (open('<%= packageNameUnderscored %>/version.py').read())
+
 setup(
     name='<%= packageNameUnderscored %>',
-    version='0.0.1',
+    version=__version__,
     author='<%= packageGitHubOrg %>',
     packages=['<%= packageNameUnderscored %>'],
     include_package_data=True,
