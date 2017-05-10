@@ -26,13 +26,14 @@
     "uninstall-local": "pip uninstall <%= packageName %> -y"
   },
   "dependencies": {
-    "builder": "2.10.1",
+    "builder": "3.2.2",
     "dash-components-archetype": "^<%= archetype.package.version || '^0.2.0' %>",
-    "react": "^15.1.0"
+    "prop-types": "^15.5.9",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "dash-components-archetype-dev": "^<%= archetype.devPackage.version || '^0.2.0' %>",
-    "enzyme": "^2.4.1",
-    "react-dom": "^15.1.0"
+    "enzyme": "^2.8.2"
   }
 }

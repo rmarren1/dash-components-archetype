@@ -1,5 +1,11 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
+/**
+ * ExampleComponent is an example component.
+ * It takes a single property, `label`, and
+ * displays it.
+ */
 export default class ExampleComponent extends Component {
     render() {
         const {label} = this.props;

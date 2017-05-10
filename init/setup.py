@@ -10,5 +10,7 @@ setup(
     include_package_data=True,
     license='MIT',
     description='<%= packageDescription || packageNameUnderscored %>',
-    install_requires=['flask', 'plotly', 'flask-cors', 'dash.ly']
+    install_requires=[
+        'dash.ly>=0.15.2,<0.16.0'
+    ]
 )
