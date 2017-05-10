@@ -108,5 +108,27 @@ npm publish && cd dev && npm publish && cd -
 [Builder]: https://github.com/FormidableLabs/builder
 [Builder Archetypes]: https://github.com/FormidableLabs/builder#archetypes
 [Dash]: https://github.com/plotly/dash2
-[dash-components-core]: https://github.com/plotly/dash-components-core
+[dash-core-components]: https://github.com/plotly/dash-core-components
 [semver]: http://semver.org/
+
+## Contributing
+
+You can test component generation with this library with `npm link` and with the absolute file path option of `builder-init`.
+
+```
+npm install -g builder-init
+git clone https://github.com/plotly/dash-components-archetype.git
+cd dash-components-archetype
+npm link
+cd dash-components-archetype-dev
+npm link
+cd ../..
+builder-init /ABSOLUTE/PATH/TO/dash-components-archetype/
+# answer prompts to create new file
+
+# Enter new package folder
+cd new-package
+npm link dash-components-archetype
+npm link dash-components-archetype-dev
+npm i
+```
