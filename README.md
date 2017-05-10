@@ -127,7 +127,7 @@ builder-init /ABSOLUTE/PATH/TO/dash-components-archetype/
 # answer prompts to create new file
 
 # Enter new package folder
-cd new-package
+cd new-package # replace with the name of your package from the prompt
 npm link dash-components-archetype
 npm link dash-components-archetype-dev
 npm i
