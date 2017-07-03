@@ -107,7 +107,7 @@ npm publish && cd dev && npm publish && cd -
 
 [Builder]: https://github.com/FormidableLabs/builder
 [Builder Archetypes]: https://github.com/FormidableLabs/builder#archetypes
-[Dash]: https://github.com/plotly/dash2
+[Dash]: https://plot.ly/dash
 [dash-core-components]: https://github.com/plotly/dash-core-components
 [semver]: http://semver.org/
 
