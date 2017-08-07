@@ -3,7 +3,16 @@ import ReactDOM from 'react-dom';
 
 import Demo from './Demo.react';
 
-ReactDOM.render(
+// Fix for rendering React externally:
+// See https://github.com/gaearon/react-hot-loader/tree/v1.3.1/docs#usage-with-external-react
+const rootInstance = ReactDOM.render(
     <Demo/>,
     document.getElementById('react-demo-entry-point')
 );
+
+require('react-hot-loader/Injection').RootInstanceProvider.injectProvider({
+    getRootInstances: function () {
+      // Help React Hot Loader figure out the root component instances on the page:
+      return [rootInstance];
+    }
+});
