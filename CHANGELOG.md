@@ -2,7 +2,35 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.2.9] - 2017-08-08
+### Fixed
+- Fix tests
+
+## [0.2.8] - 2017-08-07
+### Fixed
+- Fixed `builder run demo`
+
+## [0.2.7] - 2017-06-03
+## Fixed
+- Removed dependency on outdated `dash.ly` package
+
+## [0.2.6] - 2017-03-10
+## Added 
+- Include new test package
+
+## [0.2.5] - 2017-03-10
+## Fixed
+- The python code uses the new version of `dash` component loader
+
+## Added
+- The version number is now available in the module
+
+## [0.2.4] - 2017-02-15
+## Changed
+- Moved React and React-DOM to external dependencies. This allows multiple component packages to use the same (externally loaded) React bundle.
+
+## [0.2.3] - 2017-02-03
+### Changed
 - Change demo content-base to `demo/`
 - Change demo server to localhost:9000 to resolve conflict with Dash server
 - Add CHANGELOG to `builder-init` boilerplate
@@ -18,8 +46,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.1.0 - 2016-06-22
 - Initial release
-
-[Unreleased]: https://github.com/plotly/dash-components-archetype/compare/v0.1.5...HEAD
-[0.1.4]: https://github.com/plotly/dash-components-archetype/compare/v0.1.0...v0.1.4
-[0.1.5]: https://github.com/plotly/dash-components-archetype/compare/v0.1.4...v0.1.5
 
