@@ -19,7 +19,7 @@ class Demo extends Component {
                 <ExampleComponent
                     label="This is an example label"
                     value={this.state.value}
-                    setProps={newValue => this.setState({value: newValue})}
+                    setProps={newProps => this.setState({value: newProps.value})}
                 />
                 <hr/>
             </div>
