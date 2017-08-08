@@ -120,7 +120,7 @@ npm install -g builder-init
 git clone https://github.com/plotly/dash-components-archetype.git
 cd dash-components-archetype
 npm link
-cd dash-components-archetype-dev
+cd dev
 npm link
 cd ../..
 builder-init /ABSOLUTE/PATH/TO/dash-components-archetype/
