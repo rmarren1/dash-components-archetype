@@ -2,6 +2,13 @@ import React, {Component} from 'react';
 import {ExampleComponent} from '../src';
 
 class Demo extends Component {
+    constructor() {
+        super();
+        this.state = {
+            value: ''
+        }
+    }
+
     render() {
         return (
             <div>
@@ -11,6 +18,8 @@ class Demo extends Component {
                 <h2>ExampleComponent</h2>
                 <ExampleComponent
                     label="This is an example label"
+                    value={this.state.value}
+                    setProps={newValue => this.setState({value: newValue})}
                 />
                 <hr/>
             </div>
