@@ -2,13 +2,25 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.10] - 2017-08-08
+### Fixed
+- Fix tests in default component
+- Fixed contribution instructions
+
+### Changed
+- Made the example component more representative of actual Dash components with `setProps` usage
+- Added an `input` to the example component
+
+### Added
+- Added a templated `usage.py` file for testing the component
+
 ## [0.2.9] - 2017-08-08
 ### Fixed
-- Fix tests
+- Another fix to `builder run demo`
 
 ## [0.2.8] - 2017-08-07
 ### Fixed
-- Fixed `builder run demo`
+- Partial fix to `builder run demo`
 
 ## [0.2.7] - 2017-06-03
 ## Fixed
