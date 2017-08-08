@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.11] - 2017-08-08
+### Fixed
+- Fix src location of demo HTML page
+- Fixed demo parent component
+
 ## [0.2.10] - 2017-08-08
 ### Fixed
 - Fix tests in default component
