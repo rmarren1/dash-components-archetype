@@ -1,5 +1,7 @@
 # Dash Components Archetype
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/plotly/dash-components-archetype.svg)](https://greenkeeper.io/)
+
 ## Overview
 
 This is a [Builder][] archetype for [Dash][] component suites. It defines build-
