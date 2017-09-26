@@ -68,10 +68,10 @@ module.exports = {
     packageNameCamelCase: function (data, cb) {
       var pieces = data.packageName
         .toLowerCase()
-        .split("-")
+        .split("-");
         
       for (var i = 1; i < pieces.length; i++) {
-        var piece = pieces[i]
+        var piece = pieces[i];
         pieces[i] = piece.charAt(0).toUpperCase() + piece.slice(1);
       }
 
