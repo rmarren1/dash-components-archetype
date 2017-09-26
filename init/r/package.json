@@ -15,15 +15,15 @@
   "scripts": {
     "copy-lib": "copyfiles -u 1 lib/* <%= packageNameUnderscored %>",
     "demo": "builder run demo",
-    "install-local": "npm run copy-lib && R CMD install .",
+    "install-local": "npm run copy-lib && make",
     "prepublish": "npm test && builder run build-dist && npm run copy-lib",
-    "publish-all": "npm publish && python setup.py sdist upload",
-    "publish-pypi": "npm run prepublish && python setup.py sdist upload",
+    "publish-all": "npm publish && Rscript -e 'devtools::release()'",
+    "publish-cran": "npm run prepublish && Rscript -e 'devtools::release()'",
     "start": "builder run build-dev",
     "test": "builder run check",
     "test-watch": "builder run test-frontend-watch",
     "test-debug": "builder run test-frontend-debug",
-    "uninstall-local": "Rscript -e 'utils::remove.packages(\"<%= packageNameUnderscored %>\")'"
+    "uninstall-local": "make uninstall"
   },
   "dependencies": {
     "builder": "3.2.2",

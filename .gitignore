@@ -7,3 +7,5 @@ venv/
 *.pyc
 *.log
 .DS_Store
+*.Rproj.user
+*.Rproj
