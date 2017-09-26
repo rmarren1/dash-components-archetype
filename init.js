@@ -61,6 +61,17 @@ module.exports = {
         .toLowerCase();
 
       cb(null, convertedPackageName);
+    },
+    packageNameCamelCase: function (data, cb) {
+      var convertedPackageName = data.packageName
+        .toLowerCase()
+        .split("-")
+        .map(function(str) { 
+          return str.charAt(0).toUpperCase() + str.slice(1);
+        })
+        .join("")
+
+      cb(null, convertedPackageName);
     }
   }
 };
