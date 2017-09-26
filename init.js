@@ -63,15 +63,16 @@ module.exports = {
       cb(null, convertedPackageName);
     },
     packageNameCamelCase: function (data, cb) {
-      var convertedPackageName = data.packageName
+      var pieces = data.packageName
         .toLowerCase()
         .split("-")
-        .map(function(str) { 
-          return str.charAt(0).toUpperCase() + str.slice(1);
-        })
-        .join("")
+        
+      for (var i = 1; i < pieces.length; i++) {
+        var piece = pieces[i]
+        pieces[i] = piece.charAt(0).toUpperCase() + piece.slice(1);
+      }
 
-      cb(null, convertedPackageName);
+      cb(null, pieces.join(""));
     }
   }
 };
