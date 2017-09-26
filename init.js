@@ -37,6 +37,9 @@ module.exports = {
       default: function (data) {
         return data.packageGitHubOrg;
       }
+    },
+    email: {
+      message: 'A contact email'
     }
   },
   // Derived fields are asynchronous functions that are given the previous user
