@@ -1,10 +1,10 @@
 all: transpile document install
 
 transpile:
-	# First install this package so that we have the dependencies
+	# First install the package skeleton to ensure we have the R pkg dependencies
 	R CMD install .
-	# Then do the actual transpiling
-	Rscript -e "dashTranspileR::transpile('lib/metadata.json')"
+	# Now do the actual transpiling of metadata to an R package
+	Rscript -e "writeLines(dashTranspileR::transpile('lib/metadata.json', namespace = '<%= packageNameUnderscored %>')[['text']], 'R/components.R')"
 
 document:
 	Rscript -e "devtools::document()"
