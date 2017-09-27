@@ -39,7 +39,11 @@ module.exports = {
       }
     },
     email: {
-      message: 'A contact email'
+      message: 'A contact email',
+      validate: function(val) {
+        // http://emailregex.com/
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(val) || 'Enter a valid email address';
+      }
     }
   },
   // Derived fields are asynchronous functions that are given the previous user
