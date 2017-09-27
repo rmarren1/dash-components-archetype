@@ -21,7 +21,8 @@ module.exports = {
         { name: "Python", value: "init/python" },
         { name: "R", value: "init/r" }
       ],
-      default: "Python",
+      type: "list",
+      default: "init/python",
       validate: function (val) {
         return val === "Python" || val === "R" || 
           "Project language must be 'Python' or 'R'";
