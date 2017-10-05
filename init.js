@@ -15,19 +15,6 @@ module.exports = {
 
   prompts: {
     
-    _templatesDir: {
-      message: "Select a project language",
-      choices: [
-        { name: "Python", value: "init/python" },
-        { name: "R", value: "init/r" }
-      ],
-      type: "list",
-      default: "init/python",
-      validate: function (val) {
-        return val === "Python" || val === "R" || 
-          "Project language must be 'Python' or 'R'";
-      }
-    },
     packageName: {
       message: 'Please name your component suite.',
       validate: function (val) {

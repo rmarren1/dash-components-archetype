@@ -1,0 +1,18 @@
+# ignore JS config files
+package.json
+
+# demo folder has special meaning in R
+demo/
+test/
+src/
+lib/
+
+# ignore python files
+setup.py
+usage.py
+setup.py
+requirements.txt
+MANIFEST.in
+
+# CRAN has weird LICENSE requirements
+LICENSE.txt
