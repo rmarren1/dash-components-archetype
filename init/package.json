@@ -26,7 +26,7 @@
     "test-watch": "builder run test-frontend-watch",
     "test-debug": "builder run test-frontend-debug",
     "uninstall-local": "pip uninstall <%= packageName %> -y",
-    "uninstall-local-r": "Rscript -e \"utils::remove.packages(read.dcf('DESCRIPTION')[, 'Package']))\""
+    "uninstall-local-r": "Rscript -e \"utils::remove.packages(read.dcf('DESCRIPTION')[, 'Package'])\""
   },
   "dependencies": {
     "builder": "3.2.2",
