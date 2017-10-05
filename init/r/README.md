@@ -7,7 +7,7 @@
 <%= packageNameCamelCase %> is not yet available on CRAN, but you can install with:
 
 ```r
-remotes::install_github("<%= githubOrg %>/<%= packageNameCamelCase %>")
+remotes::install_github("<%= packageGitHubOrg %>/<%= packageNameCamelCase %>")
 ```
 
 ## Usage
