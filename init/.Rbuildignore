@@ -1,8 +1,14 @@
 # ignore JS config files/folders
 package.json
+node_modules/
+coverage/
 src/
 lib/
 <%= packageNameUnderscored %>/
+.babelrc
+.builderrc
+.eslintrc
+.npmignore
 
 # demo folder has special meaning in R
 # this should hopefully make it still 
@@ -17,6 +23,7 @@ usage.py
 setup.py
 requirements.txt
 MANIFEST.in
+CHANGELOG.md
 test/
 # CRAN has weird LICENSE requirements
 LICENSE.txt
