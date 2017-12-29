@@ -19,8 +19,8 @@ library(dasher)
 app <- Dash$new()
 
 app$layout_set(
-  exampleComponent(id = "inputID", value = "initial value"),
-  html_div(id = "outputID")
+  ExampleComponent(id = "inputID", value = "initial value"),
+  htmlDiv(id = "outputID")
 )
 
 app$callback(
