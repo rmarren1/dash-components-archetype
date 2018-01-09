@@ -8,5 +8,5 @@ venv/
 *.log
 .DS_Store
 *.Rproj.user
-*.Rproj
+dash-components-archetype.Rproj
 *.Rhistory
