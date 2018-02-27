@@ -6,6 +6,9 @@ This is a [Builder][] archetype for [Dash][] component suites. It defines build-
 and test configuration, as well as development scripts and a convenient way to
 generate a new component suite project with all the necessary boilerplate.
 
+:mega: **Component authors**: Subscribe to https://github.com/plotly/dash-components-archetype/issues/40 to be notified of **breaking changes**.
+
+
 ## Generating a component suite project
 
 ```sh
