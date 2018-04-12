@@ -14,7 +14,7 @@ remotes::install_github("<%= packageGitHubOrg %>/<%= packageName %>")
 
 ```r
 library(<%= packageNameCamelCase %>)
-library(dasher)
+library(dashR)
 
 app <- Dash$new()
 
