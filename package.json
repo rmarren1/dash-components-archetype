@@ -1,6 +1,6 @@
 {
   "name": "dash-components-archetype",
-  "version": "0.2.11",
+  "version": "0.3.0",
   "description": "A [Builder](https://github.com/FormidableLabs/builder) Archetype for Dash components suites",
   "main": "index.js",
   "dependencies": {
@@ -28,13 +28,14 @@
   },
   "scripts": {
     "builder:check": "eslint --fix --ignore-path .gitignore --ext *.js config init",
-    "build-dev": "builder run clean-lib && builder run extract-metadata && webpack -w --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
+    "build-dev": "builder run clean-lib && builder run extract-metadata && builder run generate-python-classes && webpack -w --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
     "build-dev-lib": "webpack -w --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dev.js",
-    "build-dist": "builder run clean-lib && builder run extract-metadata && webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dist.js",
+    "build-dist": "builder run clean-lib && builder run extract-metadata && builder run generate-python-classes && webpack --config=node_modules/dash-components-archetype/config/webpack/webpack.config.dist.js",
     "check": "builder run lint && builder run test-frontend-cov",
     "clean-lib": "mkdirp lib && rimraf lib/*",
     "demo": "webpack-dev-server --hot --inline --port=9000 --content-base demo --config=node_modules/dash-components-archetype/config/webpack/webpack.config.demo.js",
     "extract-metadata": "mkdirp lib && react-docgen --pretty -o lib/metadata.json src/components && node -e \"const fs = require('fs'); const path = require('path'); const m = JSON.parse(fs.readFileSync('./lib/metadata.json')); const r = {}; Object.keys(m).forEach(k => r[k.split(path.sep).join('/')] = m[k]); fs.writeFileSync('./lib/metadata.json', JSON.stringify(r, '\t', 2));\"",
+    "generate-python-classes": "python -c 'import dash; dash.development.component_loader.generate_classes()'",
     "lint": "eslint --fix --ignore-path .gitignore .",
     "test-frontend": "karma start node_modules/dash-components-archetype/config/karma/karma.conf.js",
     "test-frontend-cov": "karma start node_modules/dash-components-archetype/config/karma/karma.conf.coverage.js",
